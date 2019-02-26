@@ -9,8 +9,10 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
+@EnableScheduling
 public class VajehYabBotApplication implements CommandLineRunner {
 
 	private static final Logger log = LogManager.getLogger(VajehYabBot.class);
