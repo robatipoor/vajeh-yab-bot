@@ -11,6 +11,6 @@ public class StartBotController {
 
     @RequestMapping("/")
     public String home() {
-      return "Start Bot!";
+      return "Start Bot !";
     }
 }
