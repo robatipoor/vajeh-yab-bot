@@ -15,7 +15,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 public class VajehYabBotApplication implements CommandLineRunner {
 
-	private static final Logger log = LogManager.getLogger(VajehYabBot.class);
+	private static final Logger log = LogManager.getLogger(VajehYabBotApplication.class);
 	public final static int PORT;
 
 	static {

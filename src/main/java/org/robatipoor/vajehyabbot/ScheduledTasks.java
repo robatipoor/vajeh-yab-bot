@@ -21,7 +21,7 @@ public class ScheduledTasks {
     public void sendRequest() throws Exception {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder().url("https://yajehyabbot.herokuapp.com/").build();
-        try(Response response = client.newCall(request).execute()){
+        try (Response response = client.newCall(request).execute()) {
             log.info(response.body().string());
         }
     }
