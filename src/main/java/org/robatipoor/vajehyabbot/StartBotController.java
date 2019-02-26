@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class StartBotController {
 
-    @RequestMapping("/")
-    public String home() {
-      return "Start Bot !";
-    }
+  @RequestMapping("/")
+  public String home() {
+    return "Start Bot !";
+  }
 }

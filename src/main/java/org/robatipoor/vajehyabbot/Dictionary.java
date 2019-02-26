@@ -13,6 +13,7 @@ import org.jsoup.select.Elements;
 public class Dictionary {
 
     public static String search(String word) throws IOException {
+        
         String url = "https://www.vajehyab.com/?q=" + word;
         Document doc = Jsoup.connect(url).userAgent("Mozilla").get();
         Elements secs = doc.select("div.sections").last().select("section");

@@ -3,8 +3,8 @@ package org.robatipoor.vajehyabbot;
 import java.io.IOException;
 import java.util.Objects;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -15,7 +15,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
  */
 public class VajehYabBot extends TelegramLongPollingBot {
 
-    private static Logger log = LoggerFactory.getLogger(VajehYabBot.class);
+    private static final Logger log = LogManager.getLogger(VajehYabBot.class);
 
     @Override
     public void onUpdateReceived(Update update) {
@@ -57,8 +57,7 @@ public class VajehYabBot extends TelegramLongPollingBot {
     @Override
     public String getBotUsername() {
         if (Objects.equals(System.getenv("USERNAME_BOT"), null)) {
-            log.error("USERNAME_BOT not set !");
-            throw new EnvironmentVariableException("USERNAME_BOT not set !");
+            log.fatal("USERNAME_BOT not set !");
         }
         return System.getenv("UERNAME_BOT");
     }
@@ -66,8 +65,7 @@ public class VajehYabBot extends TelegramLongPollingBot {
     @Override
     public String getBotToken() {
         if (Objects.equals(System.getenv("TELEGRAM_TOKEN"), null)) {
-            log.error("TELEGRAM_TOKEN not set !");
-            throw new EnvironmentVariableException("TELEGRAM_TOKEN not set !");
+            log.fatal("TELEGRAM_TOKEN not set !");
         }
         return System.getenv("TELEGRAM_TOKEN");
     }
