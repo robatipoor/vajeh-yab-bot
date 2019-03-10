@@ -12,7 +12,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-@EnableScheduling
 public class VajehYabBotApplication implements CommandLineRunner {
 
 	private static final Logger log = LogManager.getLogger(VajehYabBotApplication.class);
